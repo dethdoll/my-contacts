@@ -1,7 +1,19 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+var app = app || {};
+
+
+// Contact Model
+// -------------
+// My basic contacts book has 'name' and 'phone number' attributes
+
+app.Contact = Backbone.Model.extend({
+  
+  // I need to use defaults, to make sure that every contact created, has
+  // a name and a phone number keys
+  defaults: {
+    name: '',
+    phone: ''
+  }
+  
+});
 
