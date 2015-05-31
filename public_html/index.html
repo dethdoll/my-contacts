@@ -7,11 +7,31 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
+    
+    <section id="my-contacts">
+      
+      <header id="header">
+        <h1>My Contacts Book</h1>
+        <input id="new-contact-name" placeholder="Name" autofocus>
+        <input id="new-contact-phone-number" placeholder="Phone number" autofocus>
+      </header>
+      
+      <section id="main">
+        <ul id="contacts-list"></ul>
+      </section>
+      
+      <footer id="footer"></footer>
+      
+    </section>
+    <div id="bottom-info">
+      <p>Written by <a href="https://github.com/dethdoll">Monica Salamanca</a></p>
+    </div>
+    
 
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/libs/underscore-min.js"></script>
-    <script src="js/libs/backbone.min.js"></script>
-    <script src="js/libs/backbone.localStorage.min.js"></script>
+    <script src="js/libs/backbone-min.js"></script>
+    <script src="js/libs/backbone.localStorage-min.js"></script>
     <script src="js/models/contacts.js"></script>
     <script src="js/collections/contacts.js"></script>
     <script src="js/views/contacts.js"></script>
