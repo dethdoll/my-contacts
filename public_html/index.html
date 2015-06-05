@@ -30,7 +30,13 @@
       <p>Written by <a href="https://github.com/dethdoll">Monica Salamanca</a></p>
     </div>
     
-
+    <script type="text/template" id="contact-template">
+      <div class="view">
+        <label><%= name %></label>
+        <button class="destroy"></button>
+      </div>
+      <input class="edit" value="<%= name %>">
+    </script>
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/libs/underscore-min.js"></script>
     <script src="js/libs/backbone-min.js"></script>

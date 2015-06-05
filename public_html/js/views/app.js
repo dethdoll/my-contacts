@@ -14,6 +14,11 @@ app.AppView = Backbone.View.extend({
   // TODO the bottom of the contacts to organize by gender and/or alphabetical
   // bottomTemplate = _.template .... call the bottom template which will have the filters
   
+  // Delegated events for creating new items, and clearing completed ones.
+  events: {
+    'click #add-contact': 'createOnClick'
+  }, 
+  
   // At initialization we bind to the relevant events on the 'Todos'
   // collection, when items are added or changed
   initialize: function() {
@@ -21,6 +26,9 @@ app.AppView = Backbone.View.extend({
     this.$button = this.$('#add-contact');
     
     this.listentTo(app.Contacts, 'add', this.addContact);
+    
+    app.Todos.fetch();
+    
   },
   
   // Add a single contact to the list by creating a view for it, and appending
@@ -28,6 +36,25 @@ app.AppView = Backbone.View.extend({
   addContact: function( contact ) {
     var view = new app.ContactView({ model: contact });
     $('#contacts-list').append( view.render().el );
+  },
+  
+  newAttributes: function() {
+    return {
+      name: this.$button.val().trim(),
+      phone: '333',
+      gender: 'm'
+    };
+  },
+  
+  // If you click the button, it will create a new contact in the book, 
+  // persisting it to localStorage
+  createOnClick: function( event ) {
+    if (!this.$button.val().trim()) {
+      return;
+    }
+    
+    app.Todos.create(this.newAttributes());
+    this.$button.val(''); // sets the value to empty after creating the contact
   }
   
 });
