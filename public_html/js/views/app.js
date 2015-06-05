@@ -25,9 +25,9 @@ app.AppView = Backbone.View.extend({
     
     this.$button = this.$('#add-contact');
     
-    this.listentTo(app.Contacts, 'add', this.addContact);
+    this.listenTo(app.Contacts, 'add', this.addContact);
     
-    app.Todos.fetch();
+    app.Contacts.fetch();
     
   },
   
@@ -40,9 +40,7 @@ app.AppView = Backbone.View.extend({
   
   newAttributes: function() {
     return {
-      name: this.$button.val().trim(),
-      phone: '333',
-      gender: 'm'
+      name: this.$button.val().trim()
     };
   },
   
