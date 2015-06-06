@@ -23,7 +23,9 @@ app.AppView = Backbone.View.extend({
   // collection, when items are added or changed
   initialize: function() {
     
-    this.$button = this.$('#add-contact');
+    this.$input = this.$('#new-contact-name');
+    //this.$button = this.$('#add-contact');
+    this.$main = this.$('#main');
     
     this.listenTo(app.Contacts, 'add', this.addContact);
     
@@ -31,28 +33,34 @@ app.AppView = Backbone.View.extend({
     
   },
   
+  // Re-rendering teh App just means refreshing the statistics -- the rest 
+  // of the app doesn't change
+  render: function() {
+    this.$main.show();
+  },
+  
   // Add a single contact to the list by creating a view for it, and appending
   // its elements to the '<ul>'
   addContact: function( contact ) {
     var view = new app.ContactView({ model: contact });
-    $('#contacts-list').append( view.render().el );
+    $('#contacts-list').append(view.render().el);
   },
   
   newAttributes: function() {
     return {
-      name: this.$button.val().trim()
+      name: this.$input.val().trim()
     };
   },
   
   // If you click the button, it will create a new contact in the book, 
   // persisting it to localStorage
   createOnClick: function( event ) {
-    if (!this.$button.val().trim()) {
+    if (!this.$input.val().trim()) {
       return;
     }
     
     app.Todos.create(this.newAttributes());
-    this.$button.val(''); // sets the value to empty after creating the contact
+    this.$input.val(''); // sets the value to empty after creating the contact
   }
   
 });
