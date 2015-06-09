@@ -23,8 +23,8 @@ app.AppView = Backbone.View.extend({
   // collection, when items are added or changed
   initialize: function() {
     
-    this.$input = this.$('#new-contact-name');
-    //this.$button = this.$('#add-contact');
+    this.$inputname = this.$('#new-contact-name');
+    this.$inputphone = this.$('#new-contact-phone');
     this.$main = this.$('#main');
     
     this.listenTo(app.Contacts, 'add', this.addContact);
@@ -48,19 +48,21 @@ app.AppView = Backbone.View.extend({
   
   newAttributes: function() {
     return {
-      name: this.$input.val().trim()
+      name: this.$inputname.val().trim(),
+      phone: this.$inputphone.val().trim()
     };
   },
   
   // If you click the button, it will create a new contact in the book, 
   // persisting it to localStorage
   createOnClick: function( event ) {
-    if (!this.$input.val().trim()) {
+    if (!this.$inputname.val().trim() || !this.$inputphone.val().trim()) {
       return;
     }
     
     app.Contacts.create(this.newAttributes());
-    this.$input.val(''); // sets the value to empty after creating the contact
+    this.$inputname.val(''); // sets the value to empty after creating the contact
+    this.$inputphone.val('');
   }
   
 });
