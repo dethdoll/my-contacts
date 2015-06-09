@@ -59,7 +59,7 @@ app.AppView = Backbone.View.extend({
       return;
     }
     
-    app.Todos.create(this.newAttributes());
+    app.Contacts.create(this.newAttributes());
     this.$input.val(''); // sets the value to empty after creating the contact
   }
   
