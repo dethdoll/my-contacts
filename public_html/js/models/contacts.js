@@ -12,7 +12,8 @@ app.Contact = Backbone.Model.extend({
   // a name and a phone number and the genre keys
   defaults: {
     name: '',
-    phone: ''
+    phone: '',
+    gender: ''
   }
   
 });

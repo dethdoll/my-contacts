@@ -14,6 +14,9 @@
         <h1>My Contacts Book</h1>
         <input id="new-contact-name" placeholder="Name" autofocus>
         <input id="new-contact-phone" placeholder="Phone">
+        <input class="new-contact-gender" type="radio" name="gender" 
+               value="m" checked="checked">M
+        <input class="new-contact-gender" type="radio" name="gender" value="f">F
         <button id="add-contact">Add Contact</button>
       </header>
       
@@ -30,6 +33,7 @@
       <div class="view">
         <label><%= name %></label>
         <label><%= phone %></label>
+        <label><%= gender %></label>
       </div>
     </script>
     <script src="js/libs/jquery.min.js"></script>

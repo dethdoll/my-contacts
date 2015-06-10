@@ -49,7 +49,8 @@ app.AppView = Backbone.View.extend({
   newAttributes: function() {
     return {
       name: this.$inputname.val().trim(),
-      phone: this.$inputphone.val().trim()
+      phone: this.$inputphone.val().trim(),
+      gender: this.$('input[name=gender]:checked').val()
     };
   },
   
