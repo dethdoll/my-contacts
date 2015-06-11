@@ -13,15 +13,16 @@ app.ContactView = Backbone.View.extend({
   // cache the template function for a single contact
   template: _.template( $('#contact-template').html() ),
   
-  // TODO
   // The DOM events specific to a contact
-  
+  events: {
+    'click .destroy': 'clear'
+  },
   
   // The ContactView listens for changes to its model, re-rendering. Since
   // there is a one-to-one correspondance between a **Contact** and a 
   // **ContactView** in this app, we will set a direct reference for experience
   initialize: function() {
-    //this.listenTo(this.model, 'change', this.render);
+    this.listenTo(this.model, 'destroy', this.remove);
   },
   
   // Re-renders the titles of the conact Item
@@ -29,6 +30,13 @@ app.ContactView = Backbone.View.extend({
     this.$el.html( this.template( this.model.attributes ) );
     
     return this;
+  },
+  
+  
+  //Remove the contact, destroy the model from the *localStorage* and delete 
+  //it's view
+  clear: function() {
+    this.model.destroy();
   }
   
 });

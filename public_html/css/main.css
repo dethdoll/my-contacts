@@ -1,0 +1,7 @@
+
+
+#contacts-list li .destroy:after {
+	content: '✖';
+}
+
+
