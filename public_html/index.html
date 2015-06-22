@@ -32,11 +32,13 @@
     
     <script type="text/template" id="contact-template">
       <div class="view">
-        <label><%= name %></label>
-        <label><%= phone %></label>
+        <label class="name"><%= name %></label>
+        <label class="phone"><%= phone %></label>
         <label><%= gender %></label>
         <button class="destroy"></button>
       </div>
+      <input class="edit name" value="<%= name %>">
+      <input class="edit phone" value="<%= phone %>">
     </script>
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/libs/underscore-min.js"></script>

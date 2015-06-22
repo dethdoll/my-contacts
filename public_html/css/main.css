@@ -4,4 +4,10 @@
 	content: '✖';
 }
 
+#contacts-list li .edit {
+  display: none;
+}
 
+#contacts-list li.editing .edit {
+  display: block;
+}
