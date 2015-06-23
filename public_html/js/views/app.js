@@ -33,7 +33,7 @@ app.AppView = Backbone.View.extend({
     
   },
   
-  // Re-rendering teh App just means refreshing the statistics -- the rest 
+  // Re-rendering the App just means refreshing the statistics -- the rest 
   // of the app doesn't change
   render: function() {
     this.$main.show();
@@ -43,6 +43,7 @@ app.AppView = Backbone.View.extend({
   // its elements to the '<ul>'
   addContact: function( contact ) {
     var view = new app.ContactView({ model: contact });
+    console.log(view);
     $('#contacts-list').append(view.render().el);
   },
   

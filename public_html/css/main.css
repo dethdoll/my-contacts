@@ -1,13 +1,96 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+
+body {
+  text-align: center;
+  background-color: #727070;
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #525252;
+}
+
+#my-contacts {
+  margin: 0 auto;
+  width: 550px;
+  background-color: #949090;
+  padding: 15px;
+}
+
+#my-contacts h1 {
+  font: 700 37px 'PT Sans Narrow', sans-serif;
+  
+  text-shadow: 1px 2px 3px #666;
+}
+
+#my-contacts button#add-contact {
+  background-color: #FCAD03;
+  border: none;
+  font-weight: bold;
+  font-size: 29px;
+  padding: 4px 12px;
+  height: 40px;
+  vertical-align: bottom;
+}
+
+#my-contacts input.new-data {
+    height: 34px;
+  width: 180px;
+  padding-left: 10px;
+}
+
+#contacts-list {
+    border-top: 1px solid rgb(103, 103, 101);
+  margin-top: 40px;
+  padding-top: 20px;
+    padding-left: 0;
+}
+
+#contacts-list li {
+  list-style: none;
+  position: relative;
+  margin: 0 auto;
+}
+
+#contacts-list li div.view label { 
+  line-height: 40px;
+  width: 200px;
+  display: inline-block;
+}
+
+#contacts-list li div.view.f {
+    background-color: rgba(187, 1, 128, 0.3);
+}
+
+#contacts-list li div.view.m {
+    background-color: rgba(5, 161, 184, 0.3);
+}
 
 
-#contacts-list li .destroy:after {
-	content: '✖';
+#contacts-list li .destroy {
+    background-image: url(../img/trash.png);
+    height: 20px;
+    width: 20px;
+	border: none;
+	background-color: transparent;
 }
 
 #contacts-list li .edit {
   display: none;
+  position: absolute;
+  top: 0;
+  line-height: 26px;
+  margin-top: 4px;
+  color: rgb(165, 164, 164);
+  padding-left: 5px;
+}
+
+#contacts-list li .edit.name {
+  left: 95px;
 }
 
 #contacts-list li.editing .edit {
-  display: block;
+  display: inline-block;
 }
+
+#contacts-list li.editing label {
+  display: none;
+}
+ 

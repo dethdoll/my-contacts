@@ -13,12 +13,12 @@
       
       <header id="header">
         <h1>My Contacts Book</h1>
-        <input id="new-contact-name" placeholder="Name" autofocus>
-        <input id="new-contact-phone" placeholder="Phone">
         <input class="new-contact-gender" type="radio" name="gender" 
                value="m" checked="checked">M
         <input class="new-contact-gender" type="radio" name="gender" value="f">F
-        <button id="add-contact">Add Contact</button>
+        <input id="new-contact-name" class="new-data" placeholder="Name" autofocus>
+        <input id="new-contact-phone" class="new-data" placeholder="Phone">
+        <button id="add-contact">+</button>
       </header>
       
       <section id="main">
@@ -31,10 +31,9 @@
     </div>
     
     <script type="text/template" id="contact-template">
-      <div class="view">
+      <div class="view <%= gender %>">
         <label class="name"><%= name %></label>
         <label class="phone"><%= phone %></label>
-        <label><%= gender %></label>
         <button class="destroy"></button>
       </div>
       <input class="edit name" value="<%= name %>">
