@@ -40,13 +40,13 @@ app.ContactView = Backbone.View.extend({
   
   // switch this view into 'editing' mode, displaying the input field
   editName: function() {
-    this.$el.addClass('editing');
+    this.$el.addClass('editing name');
     this.$inputname.focus();
   },
   
     // switch this view into 'editing' mode, displaying the input field
   editPhone: function() {
-    this.$el.addClass('editing');
+    this.$el.addClass('editing phone');
     this.$inputphone.focus();
   },
   
@@ -59,7 +59,7 @@ app.ContactView = Backbone.View.extend({
       this.model.save( {name: value} );
     }
     
-    this.$el.removeClass('editing');
+    this.$el.removeClass('editing name phone');
   },
   
   //If you hit 'enter', we're through editing the contact

@@ -14,9 +14,13 @@ body {
   padding: 15px;
 }
 
+#my-contacts #header .radiobtn-wrapper {
+  display:inline-block;
+  padding-right: 12px;
+}
+
 #my-contacts h1 {
   font: 700 37px 'PT Sans Narrow', sans-serif;
-  
   text-shadow: 1px 2px 3px #666;
 }
 
@@ -86,7 +90,11 @@ body {
   left: 95px;
 }
 
-#contacts-list li.editing .edit {
+#contacts-list li.editing.name .edit.name {
+  display: inline-block;
+}
+
+#contacts-list li.editing.phone .edit.phone {
   display: inline-block;
 }
 
