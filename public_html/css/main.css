@@ -4,14 +4,15 @@ body {
   text-align: center;
   background-color: #727070;
   font-family: 'PT Sans Narrow', sans-serif;
-  color: #525252;
+  color: #C8C7C7;
 }
 
 #my-contacts {
   margin: 0 auto;
-  width: 550px;
+  width: 547px;
   background-color: #949090;
-  padding: 15px;
+  background-image: url(../img/cat-bg.jpg);
+  padding-bottom: 10px;
 }
 
 #my-contacts #header .radiobtn-wrapper {
@@ -21,32 +22,38 @@ body {
 
 #my-contacts h1 {
   font: 700 50px 'PT Sans Narrow', sans-serif;
-  text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+  text-shadow: -1px 2px rgba(0, 0, 0, 0.8);
   -webkit-text-rendering: optimizeLegibility;
   -moz-text-rendering: optimizeLegibility;
   -ms-text-rendering: optimizeLegibility;
   -o-text-rendering: optimizeLegibility;
   text-rendering: optimizeLegibility;
+  padding-top: 10px;
+  color: rgb(202, 202, 202);
+  margin-bottom: 10px;
 }
 
 #my-contacts button#add-contact {
-  background-color: #FCAD03;
-  border: none;
+  background-color: transparent;
+  border: 1px solid #DBDBDB;
   font-weight: bold;
-  font-size: 29px;
-  padding: 4px 12px;
-  height: 40px;
+  font-size: 33px;
+  padding: 0px 9px;
+  height: 38px;
   vertical-align: bottom;
+  color: #DBDBDB;
 }
 
 #my-contacts input.new-data {
-    height: 34px;
+  height: 34px;
   width: 180px;
   padding-left: 10px;
+  border: 1px solid #FFF;
+  opacity: 0.7;
 }
 
 #contacts-list {
-    border-top: 1px solid rgb(103, 103, 101);
+  border-top: 1px solid rgb(103, 103, 101);
   margin-top: 40px;
   padding: 40px 50px 0 50px;
 }
@@ -65,20 +72,24 @@ body {
 }
 
 #contacts-list li div.view.f {
-    background-color: rgba(187, 1, 128, 0.3);
+  background-color: rgba(187, 1, 128, 0.3);
+  border: 1px solid rgba(189,1,128, 0.5);
+  margin-bottom: 4px;
 }
 
 #contacts-list li div.view.m {
-    background-color: rgba(5, 161, 184, 0.3);
+  background-color: rgba(5, 161, 184, 0.3);
+  border: 1px solid rgba(5,161,184,0.5);
+  margin-bottom: 4px;
 }
 
 
 #contacts-list li .destroy {
-    background-image: url(../img/trash.png);
-    height: 20px;
-    width: 20px;
-	border: none;
-	background-color: transparent;
+  background-image: url(../img/trash.png);
+  height: 20px;
+  width: 20px;
+  border: none;
+  background-color: transparent;
 }
 
 #contacts-list li .edit {
@@ -92,7 +103,11 @@ body {
 }
 
 #contacts-list li .edit.name {
-  left: 95px;
+  left: 23px;
+}
+
+#contacts-list li .edit.phone {
+  left: 207px;
 }
 
 #contacts-list li.editing.name .edit.name {
