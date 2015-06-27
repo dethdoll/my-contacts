@@ -10,9 +10,11 @@ body {
 #my-contacts {
   margin: 0 auto;
   width: 547px;
+  /* min-height: 604px; */
   background-color: #949090;
   background-image: url(../img/cat-bg.jpg);
   padding-bottom: 10px;
+  height: auto;
 }
 
 #my-contacts #header .radiobtn-wrapper {
@@ -56,6 +58,8 @@ body {
   border-top: 1px solid rgb(103, 103, 101);
   margin-top: 40px;
   padding: 40px 50px 0 50px;
+  overflow-y: auto;
+  max-height: 373px;
 }
 
 #contacts-list li {
