@@ -20,8 +20,13 @@ body {
 }
 
 #my-contacts h1 {
-  font: 700 37px 'PT Sans Narrow', sans-serif;
-  text-shadow: 1px 2px 3px #666;
+  font: 700 50px 'PT Sans Narrow', sans-serif;
+  text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
 }
 
 #my-contacts button#add-contact {
@@ -43,8 +48,7 @@ body {
 #contacts-list {
     border-top: 1px solid rgb(103, 103, 101);
   margin-top: 40px;
-  padding-top: 20px;
-    padding-left: 0;
+  padding: 40px 50px 0 50px;
 }
 
 #contacts-list li {
@@ -55,8 +59,9 @@ body {
 
 #contacts-list li div.view label { 
   line-height: 40px;
-  width: 200px;
+  width: 180px;
   display: inline-block;
+  text-align: left;
 }
 
 #contacts-list li div.view.f {
