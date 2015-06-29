@@ -1,0 +1,125 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+
+body {
+  text-align: center;
+  background-color: #727070;
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #C8C7C7;
+}
+
+#my-contacts {
+  margin: 0 auto;
+  width: 547px;
+  background-color: #949090;
+  background-image: url(../img/cat-bg.jpg);
+  padding-bottom: 10px;
+  height: auto;
+  
+  #header .radiobtn-wrapper {
+    display:inline-block;
+    padding-right: 12px;
+  }
+  
+  h1 {
+    font: 700 50px 'PT Sans Narrow', sans-serif;
+    text-shadow: -1px 2px rgba(0, 0, 0, 0.8);
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    padding-top: 10px;
+    color: rgb(202, 202, 202);
+    margin-bottom: 10px;
+  }
+  
+  button#add-contact {
+    background-color: transparent;
+    border: 1px solid #DBDBDB;
+    font-weight: bold;
+    font-size: 33px;
+    padding: 0px 9px;
+    height: 38px;
+    vertical-align: bottom;
+    color: #DBDBDB;
+  }
+  
+  input.new-data {
+    height: 34px;
+    width: 180px;
+    padding-left: 10px;
+    border: 1px solid #FFF;
+    opacity: 0.7;
+  }
+}
+
+#contacts-list {
+  border-top: 1px solid rgb(103, 103, 101);
+  margin-top: 40px;
+  padding: 40px 50px 0 50px;
+  overflow-y: auto;
+  max-height: 373px;
+  
+  li {
+    list-style: none;
+    position: relative;
+    margin: 0 auto;
+    
+    div.view label { 
+      line-height: 40px;
+      width: 180px;
+      display: inline-block;
+      text-align: left;
+    }
+    
+    div.view.f {
+      background-color: rgba(187, 1, 128, 0.3);
+      border: 1px solid rgba(189,1,128, 0.5);
+      margin-bottom: 4px;
+    }
+    
+    div.view.m {
+      background-color: rgba(5, 161, 184, 0.3);
+      border: 1px solid rgba(5,161,184,0.5);
+      margin-bottom: 4px;
+    }
+    
+    .destroy {
+      background-image: url(../img/trash.png);
+      height: 20px;
+      width: 20px;
+      border: none;
+      background-color: transparent;
+    }
+    
+    .edit {
+      display: none;
+      position: absolute;
+      top: 0;
+      line-height: 26px;
+      margin-top: 4px;
+      color: rgb(165, 164, 164);
+      padding-left: 5px;
+    }
+    
+    .edit.name {
+      left: 23px;
+    }
+    
+    .edit.phone {
+      left: 207px;
+    }
+  }
+  
+  li.editing.name .edit.name {
+    display: inline-block;
+  }
+  
+  li.editing.phone .edit.phone {
+    display: inline-block;
+  }
+  
+  li.editing label {
+    display: none;
+  }
+}
