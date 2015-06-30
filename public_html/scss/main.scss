@@ -15,6 +15,15 @@ body {
   padding-bottom: 10px;
   height: auto;
   
+  #header p {
+    margin: 0;
+    padding-top: 12px;
+    color: rgb(208, 118, 29);
+    font-size: 18px;
+    background-color: #FFF;
+    opacity: 0.6;
+  }
+  
   #header .radiobtn-wrapper {
     display:inline-block;
     padding-right: 12px;

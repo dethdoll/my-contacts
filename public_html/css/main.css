@@ -12,6 +12,13 @@ body {
   background-image: url(../img/cat-bg.jpg);
   padding-bottom: 10px;
   height: auto; }
+  #my-contacts #header p {
+    margin: 0;
+    padding-top: 12px;
+    color: #d0761d;
+    font-size: 18px;
+    background-color: #FFF;
+    opacity: 0.6; }
   #my-contacts #header .radiobtn-wrapper {
     display: inline-block;
     padding-right: 12px; }
